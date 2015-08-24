@@ -1,0 +1,27 @@
+{
+  "name": "TabStorm",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Manages all those crazy tabs.",
+  "icons": { "128": "tab_icon.png" },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": [ "tabManager.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches" : [ "*://*/*" ],
+      "js" : ["js/jquery-1.9.1.js", "js/jquery-ui.js", "tabCloser.js"],
+      "css" : ["css/base.css", "css/jquery-ui.css", "css/jquery-ui.structure.css", "css/jquery-ui.theme.css"]
+    }
+  ],
+  "web_accessible_resources": [ "images/*" ]
+}
