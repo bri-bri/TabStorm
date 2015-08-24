@@ -1,5 +1,5 @@
-# GitNames
-Chrome Extension to show usernames instead of github IDs
+# TabStorm
+Chrome Extension to show a prompt when you have more than 12 tabs open. Tabs will be listed in least-recently used order; can be refreshed or closed on the spot.
 
 ## Installation
 After cloning this repo, follow the steps below to install the extension.
@@ -10,11 +10,8 @@ After cloning this repo, follow the steps below to install the extension.
 4. Activate the extension!
 
 ## Behavior
-Will automatically replace user ids with usernames when available. Some users haven't included their real names; you will see their id in these cases.
-
-##### Rate Limiting
-No special authentication is used (or needed, in most cases). If you see more than 60 new user names in an hour, you will likely be rate limited until the next hour. This won't break anything or cause adverse affects, except that you will see github ids instead of usernames.
-
-##### Caching
-Users who have been previously retrieved are cached to ensure only 1 request per user per 30 minutes at max. Usernames will be checked for modifications using the "If-Modified-Since" header which incurs no rate limit penalties.
-
+1. After 12 tabs are opened, a prompt will appear in any new tabs
+    1. Click the "x" button next to the tab description to close tabs
+    2. Click the check to refresh the tab
+    3. Once you close the prompt (click the upper-right x or press "Esc"), it won't appear automatically again for 15 minutes.
+2. Click the extension icon browser action to show the prompt at any time and refresh the 15 minute waiting period
