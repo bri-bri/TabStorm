@@ -22,13 +22,13 @@
    font-weight: bold;
 }
 
-.alert {
+.tabStorm-alert {
     border: 6px solid #a94442 !important;
     padding: 0px !important;
     border-radius: 6px !important;
 }
 
-.alert .ui-dialog-titlebar {
+.tabStorm-alert .ui-dialog-titlebar {
     color: #a94442 !important;
     background-color: #f2dede !important;
     background-image: none !important;

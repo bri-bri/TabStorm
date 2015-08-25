@@ -3,6 +3,7 @@ var TabStorm = function() {
     this.currentWindow = null;
     this.tabs ={};
     this.pauseUntil = 0;
+    this.maxTabs = 15;
 
     this.init = function() {
         var that = this;
@@ -58,7 +59,7 @@ var TabStorm = function() {
         new_tab.date = date;
         
         if (!that.tabs.hasOwnProperty(new_tab.id)) {
-            if (Object.keys(that.tabs).length >= 12) {
+            if (Object.keys(that.tabs).length >= that.maxTabs) {
                 shouldRender = true;
             }
         }

@@ -81,16 +81,18 @@ var TabCloser = function() {
         $dialog_div.append($ul_parent);
         
         $(document.body).remove('#tabStormDialog'); // Just in case; not strictly necessary
-        $(document.body).append($dialog_div);
-        $('#tabStormDialog').dialog({
-            autoOpen: true,
-            width: 500,
-            dialogClass: "alert",
-            close: function() {
-                that.close();
-            }
-          });
         that.isShowing = true;
+        setTimeout(function() {
+            $(document.body).append($dialog_div);
+            $('#tabStormDialog').dialog({
+                autoOpen: true,
+                width: 500,
+                dialogClass: "tabStorm-alert",
+                close: function() {
+                    that.close();
+                }
+            });
+        }, 500);
     }
     
     this.renderTab = function(tab) {
